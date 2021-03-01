@@ -3,14 +3,11 @@ package ru.sapronov.spring.boot.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ru.sapronov.spring.boot.dto.UserDto;
-import ru.sapronov.spring.boot.models.Role;
 import ru.sapronov.spring.boot.models.User;
 import ru.sapronov.spring.boot.services.RoleService;
 import ru.sapronov.spring.boot.services.UserService;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -38,17 +35,15 @@ public class AdminRestController {
         return new UserDto(userService.show(id));
     }
 
-    //TODO: использовать dtoToUser !!!!!!!!!
     @PostMapping
     public  List<UserDto> createNewUser(@RequestBody UserDto dto) {
         userService.save(dtoToUser(dto));
-        //userService.save(new User(dto));
         return getDtoList(userService.index());
     }
 
     @PutMapping
     public List<UserDto> updateUser(@RequestBody UserDto dto) {
-        userService.update(userService.show(dto.getId()));
+        userService.update(dtoToUser(dto));
         return getDtoList(userService.index());
     }
 

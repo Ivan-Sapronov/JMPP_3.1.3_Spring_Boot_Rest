@@ -271,33 +271,51 @@
                             <div class="col-7">
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="editModalId" class="form-control-label">Id</label>
+                                        <label for="editUser_Id" class="form-control-label">Id</label>
                                     </div>
-                                    <input type="text" id="editModalId" class="form-control" name="id" readonly/>
+                                    <input type="text" id="editUser_Id" class="form-control" name="id" readonly/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="editModalUserName" class="form-control-label">Login</label>
+                                        <label for="editUser_Login" class="form-control-label">Login</label>
                                     </div>
-                                    <input type="text" class="form-control" id="editModalUserName" name="username"/>
+                                    <input type="text" class="form-control" id="editUser_Login" name="username"/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="editModalEmail" class="form-control-label">Email</label>
+                                        <label for="editUser_Firstname" class="form-control-label">Name</label>
                                     </div>
-                                    <input type="text" class="form-control" id="editModalEmail" name="email"/>
+                                    <input type="text" class="form-control" id="editUser_Firstname" name="firstname"/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="editModalPassword" class="form-control-label">Password (bcrypt)</label>
+                                        <label for="editUser_Surname" class="form-control-label">Surname</label>
                                     </div>
-                                    <input type="text" class="form-control" id="editModalPassword" name="password"/>
+                                    <input type="text" class="form-control" id="editUser_Surname" name="surname"/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="editModalRole" class="form-control-label">Roles</label>
+                                        <label for="editUser_Age" class="form-control-label">Age</label>
                                     </div>
-                                    <select for="role" id="editModalRole" name="role" multiple size="2"
+                                    <input type="text" class="form-control" id="editUser_Age" name="age"/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="editUser_Email" class="form-control-label">Email</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="editUser_Email" name="email"/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="editUser_Password" class="form-control-label">Password (bcrypt)</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="editUser_Password" name="password"/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="editUser_Roles" class="form-control-label">Roles</label>
+                                    </div>
+                                    <select for="role" id="editUser_Roles" name="role" multiple size="2"
                                             class="form-control form-control-sm">
                                         <option value="ROLE_ADMIN" adminSelect>ADMIN</option>
                                         <option value="ROLE_USER" userSelect>USER</option>
@@ -333,27 +351,45 @@
                             <div class="col-7">
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="deleteModalId" class="form-control-label">Id</label>
+                                        <label for="deleteUser_Id" class="form-control-label">Id</label>
                                     </div>
-                                    <input type="text" id="deleteModalId" class="form-control" name="id" readonly/>
+                                    <input type="text" id="deleteUser_Id" class="form-control" name="id" readonly/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="userName" class="form-control-label">Login</label>
+                                        <label for="deleteUser_Login" class="form-control-label">Login</label>
                                     </div>
-                                    <input type="text" class="form-control" id="userName" name="username" readonly/>
+                                    <input type="text" class="form-control" id="deleteUser_Login" name="username" readonly/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="email" class="form-control-label">Email</label>
+                                        <label for="deleteUser_Firstname" class="form-control-label">Name</label>
                                     </div>
-                                    <input type="text" class="form-control" id="email" name="email" readonly/>
+                                    <input type="text" class="form-control" id="deleteUser_Firstname" name="firstname" readonly/>
                                 </div>
                                 <div class="form-group">
                                     <div class="text-center font-weight-bold">
-                                        <label for="role" class="form-control-label">Roles</label>
+                                        <label for="deleteUser_Surname" class="form-control-label">Surname</label>
                                     </div>
-                                    <select for="role" id="role" name="role" multiple size="2"
+                                    <input type="text" class="form-control" id="deleteUser_Surname" name="surname" readonly/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="deleteUser_Age" class="form-control-label">Age</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="deleteUser_Age" name="age" readonly/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="deleteUser_Email" class="form-control-label">Email</label>
+                                    </div>
+                                    <input type="text" class="form-control" id="deleteUser_Email" name="email" readonly/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center font-weight-bold">
+                                        <label for="deleteUser_Roles" class="form-control-label">Roles</label>
+                                    </div>
+                                    <select for="role" id="deleteUser_Roles" name="role" multiple size="2"
                                             class="form-control form-control-sm" readonly>
                                         <option value="ROLE_ADMIN" adminSelect>ADMIN</option>
                                         <option value="ROLE_USER" userSelect>USER</option>
